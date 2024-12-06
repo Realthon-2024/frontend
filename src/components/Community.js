@@ -88,8 +88,8 @@ const Community = () => {
 자세한 내용은 댓글로 질문해주세요!`,
       author: '서울살이',
       views: 567,
-      likes: 45,
-      comments: 32
+      // likes: 45,
+      // comments: 32
     },
     // ... other posts
   ]);
@@ -351,81 +351,84 @@ const Community = () => {
     </div>
   ) : selectedPost ? (
     // Full Post View
-    <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
-          <button 
-            onClick={() => setSelectedPost(null)}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-          <button className="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-600">
-            {selectedPost.category}
-          </button>
-        </div>
-        <button
-          onClick={async () => {
-            try {
-              const response = await fetch('https://port-0-realthon-m49ojdhzcd6677d6.sel4.cloudtype.app/user/translate', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${localStorage.getItem('token')}`
-
-                },
-                body: JSON.stringify({
-                  text: selectedPost.content
-                })
-              });
-              
-              console.log(selectedPost.content)
-              if (!response.ok) {
-                throw new Error('Translation failed');
-              }
-              
-              const data = await response.json();
-              setSelectedPost({
-                ...selectedPost,
-                content: data.translatedText
-              });
-            } catch (error) {
-              console.error('Translation error:', error);
-              alert('번역 중 오류가 발생했습니다.');
+<div className="max-w-3xl mx-auto bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+  <div className="flex items-center justify-between mb-6">
+    <div className="flex items-center gap-4">
+      <button 
+        onClick={() => setSelectedPost(null)}
+        className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
+      >
+        <ArrowLeft className="w-5 h-5" />
+      </button>
+      <button className="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-600">
+        {selectedPost.category}
+      </button>
+    </div>
+    <button
+      onClick={async () => {
+        try {
+          const requestData = {
+            data: {
+              title: selectedPost.title,
+              author: selectedPost.author,
+              viewCount: selectedPost.views,
+              content: selectedPost.content
             }
-          }}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-        >
-          번역
-        </button>
-      </div>
+          };
 
-      <h2 className="text-2xl font-bold mb-4">{selectedPost.title}</h2>
-      
-      <div className="flex items-center justify-between mb-6">
-        <span className="text-gray-600">{selectedPost.author}</span>
-        <div className="flex items-center gap-4 text-sm text-gray-500">
-          <div className="flex items-center gap-1">
-            <Eye className="w-4 h-4" /> 
-            <span>{selectedPost.views}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            {/* <Heart className="w-4 h-4" />
-            <span>{selectedPost.likes}</span> */}
-          </div>
-          <div className="flex items-center gap-1">
-            {/* <MessageCircle className="w-4 h-4" />
-            <span>{selectedPost.comments}</span> */}
-          </div>
-        </div>
-      </div>
-      
-      <div className="prose max-w-none">
-        <p className="text-gray-800 whitespace-pre-line">
-          {selectedPost.content}
-        </p>
+          const response = await fetch('https://port-0-realthon-m49ojdhzcd6677d6.sel4.cloudtype.app/user/translate', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify(requestData)
+          });
+          
+          console.log('Sending data:', requestData);
+          
+          if (!response.ok) {
+            throw new Error('Translation failed');
+          }
+          
+          const translatedData = await response.json();
+          // Update the selected post with all translated fields
+          setSelectedPost({
+            ...selectedPost,
+            title: translatedData.data.title,
+            author: translatedData.data.author,
+            content: translatedData.data.content,
+            isTranslated: true // Optional: add a flag to track translation state
+          });
+        } catch (error) {
+          console.error('Translation error:', error);
+          alert('번역 중 오류가 발생했습니다.');
+        }
+      }}
+      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+    >
+      {selectedPost.isTranslated ? '원문 보기' : '번역'} {/* Optional: toggle button text */}
+    </button>
+  </div>
+
+  <h2 className="text-2xl font-bold mb-4">{selectedPost.title}</h2>
+  
+  <div className="flex items-center justify-between mb-6">
+    <span className="text-gray-600">{selectedPost.author}</span>
+    <div className="flex items-center gap-4 text-sm text-gray-500">
+      <div className="flex items-center gap-1">
+        <Eye className="w-4 h-4" /> 
+        <span>{selectedPost.views}</span>
       </div>
     </div>
+  </div>
+  
+  <div className="prose max-w-none">
+    <p className="text-gray-800 whitespace-pre-line">
+      {selectedPost.content}
+    </p>
+  </div>
+</div>
   ) : (
     // Posts Grid
     <div className="grid grid-cols-2 gap-6">
