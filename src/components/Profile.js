@@ -182,11 +182,11 @@ const Profile = () => {
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col items-center pt-16 px-4 max-w-4xl mx-auto">
           {/* Profile Picture */}
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center">
               <User className="w-16 h-16 text-gray-400" />
             </div>
-          </div>
+          </div> */}
 
           {/* Edit/Save Button */}
           <div className="w-full mb-4 flex justify-end">

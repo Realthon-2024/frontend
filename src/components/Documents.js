@@ -16,12 +16,164 @@ const Documents = () => {
 
     // Sample application data with counts
   const applicationStats = {
-    '지원현황': 12,
-    '지원완료': 5,
-    '면접': 3,
-    '채용확정': 2,
-    '취소/거절': 2
+    '지원현황':3,
+    '지원완료': 2,
+    '면접': 1,
+    '채용확정': 0,
+    '취소/거절': 0
   };
+  const jobPosts = [
+    {
+      id: 1,
+      company: {
+        name: '삼성전자',
+        logo: 'https://images.samsung.com/kdp/aboutsamsung/brand_identity/logo/256_144_1.png?$512_288_PNG$'
+      },
+      title: '전자부품 조립원',
+      location: '서울 구로구',
+      dueDate: '2024.12.31',
+      views: 1520,
+      scraps: 80,
+      isScraped: false,
+      직무: '조립',
+      비자: 'H-2',
+      지역: '서울',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
+      고용형태: '정규직',
+      description: `주요업무
+    - 전자부품 조립 및 검사
+    - 공정 기준에 따른 작업 수행
+    
+    자격요건
+    - 기본적인 한국어 소통 가능
+    - 팀워크를 중요하게 생각하는 분
+    
+    우대사항
+    - 관련 경력자 우대
+    - 성실하고 책임감 있는 분`
+    },
+    {
+      id: 2,
+      company: {
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
+      },
+      title: '물류 창고 관리자',
+      location: '경기도 평택',
+      dueDate: '2024.12.20',
+      views: 1320,
+      scraps: 75,
+      isScraped: true,
+      직무: '물류',
+      비자: 'F-2',
+      지역: '경기',
+      언어: ['한국어 (기본)', '영어 (우대)'],
+      경력: '1년 이상',
+      고용형태: '계약직',
+      description: `주요업무
+    - 물류 창고 재고 관리
+    - 물품 입출고 및 분류
+    
+    자격요건
+    - 한국어 기초 소통 가능
+    - 체력적으로 문제가 없는 분
+    
+    우대사항
+    - 물류 관리 시스템 경험자
+    - 컴퓨터 활용 가능`
+    },
+    {
+      id: 3,
+      company: {
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
+      },
+      title: '제과 제조 보조원',
+      location: '부산 사하구',
+      dueDate: '2024.11.30',
+      views: 1540,
+      scraps: 90,
+      isScraped: false,
+      직무: '제조',
+      비자: 'E-9',
+      지역: '부산',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
+      고용형태: '정규직',
+      description: `주요업무
+    - 제과 제조 공정 보조
+    - 생산 라인 청결 및 위생 관리
+    
+    자격요건
+    - 한국어 기초 소통 가능
+    - 야간 근무 가능자
+    
+    우대사항
+    - 관련 경험자 우대
+    - 성실하고 꼼꼼한 분`
+    },
+    {
+      id: 4,
+      company: {
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
+      },
+      title: '청소 및 시설 관리',
+      location: '서울 강남구',
+      dueDate: '2024.12.15',
+      views: 1230,
+      scraps: 50,
+      isScraped: true,
+      직무: '시설 관리',
+      비자: 'H-2',
+      지역: '서울',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
+      고용형태: '계약직',
+      description: `주요업무
+    - 공장 및 사무실 청소
+    - 시설 내 위생 관리
+    
+    자격요건
+    - 기본적인 한국어 가능
+    - 성실하고 신체 건강한 분
+    
+    우대사항
+    - 관련 직무 경험자
+    - 팀 작업에 익숙한 분`
+    },
+    {
+      id: 5,
+      company: {
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
+      },
+      title: '건설 현장 보조원',
+      location: '인천 연수구',
+      dueDate: '2024.12.10',
+      views: 1650,
+      scraps: 110,
+      isScraped: false,
+      직무: '건설',
+      비자: 'E-10',
+      지역: '인천',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
+      고용형태: '정규직',
+      description: `주요업무
+    - 건설 현장 작업 보조
+    - 현장 정리 및 자재 운반
+    
+    자격요건
+    - 한국어 기초 소통 가능
+    - 신체 건강하고 체력 좋은 분
+    
+    우대사항
+    - 관련 작업 경험자
+    - 안전 장비 사용 경험`
+    }
+  ];
 
 
   // Sample resume data
@@ -37,7 +189,13 @@ const Documents = () => {
         basicInfo: {
           name: "홍길동",
           email: "hong@email.com",
-          phone: "010-1234-5678"
+          phone: "010-1234-5678",
+          nationality: "한국",
+          residencyStatus: "F-4",
+          address: "서울시 강남구",
+        //   한국어능력수준: "상",
+        //   구사 가능한 언어: ["한국어", "영어"],
+          지원동기: "한국 IT 시장에서 성장하고, 기술적으로 도전하고자 하는 목표를 이루기 위해 이력서를 작성했습니다."
         },
         education: "서울대학교 컴퓨터공학과",
         experience: [
@@ -58,7 +216,13 @@ const Documents = () => {
         basicInfo: {
           name: "김철수",
           email: "kim@email.com",
-          phone: "010-5678-1234"
+          phone: "010-5678-1234",
+          nationality: "한국",
+          residencyStatus: "E-2",
+        //   address: "서울시 서초구",
+        //   한국어능력수준: "중",
+        //   구사 가능한 언어: ["한국어", "영어"],
+          지원동기: "국제적인 개발자로 성장하고 다양한 문화 속에서 기술적 문제를 해결하는 능력을 기르기 위해 이력서를 작성했습니다."
         },
         education: "한양대학교 소프트웨어학과",
         experience: [
@@ -91,6 +255,51 @@ const Documents = () => {
         break;
     }
   };
+  const [applications, setApplications] = useState([
+    {
+      id: 1,
+      company: {
+        name: '삼성전자',
+        logo: 'https://images.samsung.com/kdp/aboutsamsung/brand_identity/logo/256_144_1.png?$512_288_PNG$'
+      },
+      position: '전자부품 조립원',
+      location: '서울 서초구',
+      appliedDate: '2024.11.15',
+      status: '면접',
+      nextStep: '2차 면접 예정',
+      dueDate: '2024.12.31',
+      jobDescription: `주요업무
+- React 기반의 웹 애플리케이션 개발
+- 사용자 인터페이스 구현 및 개선
+- 성능 최적화 및 테스트 코드 작성`
+    },
+    {
+      id: 2,
+      company: {
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
+      },
+      position: '물류 창고 관리자',
+      location: '경기도 성남시',
+      appliedDate: '2024.11.20',
+      status: '지원완료',
+      nextStep: '서류 검토중',
+      dueDate: '2024.12.25'
+    },
+    {
+        id: 3,
+        company: {
+          name: '네이버',
+          logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
+        },
+        position: '제과 제조 보조원',
+        location: '경기도 성남시',
+        appliedDate: '2024.11.20',
+        status: '지원완료',
+        nextStep: '서류 검토중',
+        dueDate: '2024.12.25'
+      },
+  ]);
 
   const handleResumeClick = (resumeId) => {
     setSelectedStatus(selectedStatus?.id === resumeId ? null : resumes.find(resume => resume.id === resumeId));
@@ -254,52 +463,112 @@ const Documents = () => {
       );
     }
 
-    if (selectedCategory === '지원현황') {
+    if (selectedCategory === '스크랩') {
         return (
-          <div>
-            {/* Status Filter Bar */}
-            <div className="flex gap-4 mb-8">
-              {Object.entries(applicationStats).map(([status, count]) => (
-                <button
-                  key={status}
-                  onClick={() => setSelectedStatus(status)}
-                  className={`flex-1 relative px-6 py-3 text-sm font-medium rounded-lg transition-colors
-                    ${selectedStatus === status 
-                      ? 'bg-login text-white' 
-                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
-                    }`}
-                >
-                  <div className="flex items-center justify-center gap-2">
-                    <span>{status}</span>
-                    <span className={`px-2 py-0.5 text-xs rounded-full 
-                      ${selectedStatus === status
-                        ? 'bg-white text-login'
-                        : 'bg-gray-100 text-gray-600'
-                      }`}
-                    >
-                      {count}
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </div>
-  
-            {/* Application List Placeholder */}
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <div className="text-center text-gray-500">
-                {selectedStatus} 내역이 여기에 표시됩니다.
-              </div>
-            </div>
+          <div className="text-center py-8 text-gray-500">
+            {selectedStatus}에 해당하는 지원 내역이 없습니다.
           </div>
         );
       }
-  
+
+
+    
+      const filteredApplications = selectedStatus === '지원현황' 
+        ? applications 
+        : applications.filter(app => app.status === selectedStatus);
+    
       return (
-        <div className="text-center py-8 text-gray-500">
-          {selectedCategory} 컨텐츠가 여기에 표시됩니다.
+        <div>
+          {/* Status Filter Bar */}
+          <div className="flex gap-4 mb-8">
+            {Object.entries(applicationStats).map(([status, count]) => (
+              <button
+                key={status}
+                onClick={() => setSelectedStatus(status)}
+                className={`flex-1 relative px-6 py-3 text-sm font-medium rounded-lg transition-colors
+                  ${selectedStatus === status 
+                    ? 'bg-blue-500 text-white' 
+                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                  }`}
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <span>{status}</span>
+                  <span className={`px-2 py-0.5 text-xs rounded-full 
+                    ${selectedStatus === status
+                      ? 'bg-white text-blue-700'
+                      : 'bg-gray-100 text-gray-600'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+    
+          {/* Applications List */}
+          <div className="space-y-4">
+            {filteredApplications.map((application) => (
+              <div 
+                key={application.id}
+                className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center gap-6">
+                  {/* Company Logo */}
+                  <img
+                    src={application.company.logo}
+                    alt={application.company.name}
+                    className="w-16 h-16 rounded-lg object-cover"
+                  />
+    
+                  {/* Application Details */}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <div>
+                        <div className="text-gray-600 mb-1">{application.company.name}</div>
+                        <h3 className="text-lg font-bold">{application.position}</h3>
+                      </div>
+                      <div className={`px-3 py-1 rounded-full text-sm
+                        ${application.status === '면접' ? 'bg-blue-100 text-blue-700' :
+                          application.status === '채용확정' ? 'bg-green-100 text-green-700' :
+                          application.status === '취소/거절' ? 'bg-red-100 text-red-700' :
+                          'bg-gray-100 text-gray-700'}`}
+                      >
+                        {application.status}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-1">
+                        <MapPin className="w-4 h-4" />
+                        <span>{application.location}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>지원일: {application.appliedDate}</span>
+                      </div>
+                    </div>
+    
+                    {application.nextStep && (
+                      <div className="mt-4 text-sm">
+                        <span className="font-medium">다음 단계: </span>
+                        <span className="text-blue-600">{application.nextStep}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+    
+            {filteredApplications.length === 0 && (
+              <div className="text-center py-8 text-gray-500">
+                {selectedStatus}에 해당하는 지원 내역이 없습니다.
+              </div>
+            )}
+          </div>
         </div>
       );
-    };
+    }
   
     return (
       <div className="flex h-screen bg-gray-50">
@@ -518,7 +787,7 @@ const Documents = () => {
   };
 
   
-const ResumeViewer = ({ resume, onBack, onEdit }) => {
+  const ResumeViewer = ({ resume, onBack, onEdit }) => {
     // Safely extract values from resume with defaults
     const {
       title = '',
@@ -658,7 +927,7 @@ const ResumeViewer = ({ resume, onBack, onEdit }) => {
           </div>
   
           {/* Other Sections */}
-          {[
+          {[ 
             { title: '학력/자격', field: 'education' },
             { title: '경력사항', field: 'experience' },
             { title: '지원동기', field: 'motivation' }
@@ -695,7 +964,6 @@ const ResumeViewer = ({ resume, onBack, onEdit }) => {
       </div>
     );
   };
-  
   
   export default Documents;
    

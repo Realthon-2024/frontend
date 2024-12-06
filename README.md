@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# 외국인 근로자 취업 포털
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+한국에서 일하는 외국인 근로자를 위한 종합 웹 애플리케이션입니다. 취업 기회 탐색, 지원서 관리, 경력 개발을 지원합니다. React와 최신 웹 기술을 사용하여 구축되었습니다.
 
-## Available Scripts
+## 주요 기능
 
-In the project directory, you can run:
+### 1. 사용자 인증 및 프로필 관리
+- 안전한 로그인 및 회원가입 시스템
+- 다국어 지원
+- 개인 및 전문 정보를 포함한 프로필 커스터마이징
+- 언어 선호도 설정
+- 체류자격(비자) 상태 관리
 
-### `npm start`
+### 2. 채용정보 검색 및 지원
+- 다양한 필터를 통한 고급 검색:
+  - 직무 카테고리
+  - 비자 요구사항
+  - 근무지역
+  - 언어 요구사항
+  - 경력 수준
+  - 고용형태
+- 실시간 채용공고 목록
+- 상세한 직무 설명
+- 간편한 지원 프로세스
+- 지원 현황 추적
+- 관심 공고 스크랩
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. 이력서 관리
+- 다중 이력서 작성 및 관리
+- 이력서 템플릿 제공
+- 언어별 이력서 버전 관리
+- 문서 상태 추적
+- 이력서 편집 및 업데이트
+- 미리보기 기능
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. 커뮤니티 기능
+- 주제별 게시판:
+  - 취업/고민 Q&A
+  - 취업 정보 및 후기
+  - 한국생활 팁
+  - 자유게시판
+- 게시글 작성 및 관리
+- 실시간 콘텐츠 번역
+- 조회수 추적
+- 게시글 카테고리 분류
 
-### `npm test`
+### 5. 지원 현황 관리
+- 종합적인 지원 상태 모니터링
+- 상태 카테고리:
+  - 지원완료
+  - 진행중
+  - 면접
+  - 합격
+  - 불합격
+- 면접 일정 관리
+- 지원 이력 관리
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술 구현
 
-### `npm run build`
+### 컴포넌트 구조
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 1. 인증 (Login.js)
+- 사용자 인증 처리
+- 유효성 검사가 포함된 회원가입 폼
+- 토큰 관리
+- 네비게이션 제어
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 2. 채용공고 (Job.js)
+- 채용공고 목록 표시
+- 고급 필터링 시스템
+- 채용공고 상세 보기
+- 지원서 제출
+- 스크랩 기능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 3. 커뮤니티 (Community.js)
+- 게시글 목록 및 작성
+- 카테고리 관리
+- 번역 통합
+- 게시글 상호작용 추적
 
-### `npm run eject`
+#### 4. 문서 관리 (Document.js)
+- 이력서 작성 인터페이스
+- 지원 현황 추적
+- 상태 관리
+- 문서 구성
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 5. 프로필 관리 (Profile.js)
+- 사용자 정보 관리
+- 설정 구성
+- 프로필 편집
+- 언어 선호도
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 6. 채팅 인터페이스 (ClaudeInterface.js)
+- AI 기반 채팅 지원
+- 메시지 기록
+- 실시간 응답
+- 마크다운 지원
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 사용 기술
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **프론트엔드 프레임워크**: React
+- **UI 컴포넌트**: 
+  - Lucide React (아이콘)
+  - 커스텀 컴포넌트
+  - Tailwind CSS (스타일링)
+- **상태 관리**: React Hooks
+- **라우팅**: React Router
+- **API 통합**:
+  - REST API 통신
+  - 토큰 기반 인증
+  - 실시간 업데이트
 
-## Learn More
+### 스타일링
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Tailwind CSS를 활용한 반응형 디자인
+- 일관된 컬러 스킴
+- 모바일 친화적 인터페이스
+- 다크 테마 지원
+- 접근성이 고려된 UI 요소
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 설치 및 설정
 
-### Code Splitting
+1. 저장소 클론
+```bash
+git clone [저장소-URL]
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. 의존성 설치
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+3. 환경 변수 설정
+```bash
+cp .env.example .env
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. 개발 서버 시작
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+## API 연동
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+애플리케이션은 다음과 같은 엔드포인트와 통신합니다:
 
-### Advanced Configuration
+- `/auth/signin` - 사용자 인증
+- `/auth/signup` - 회원가입
+- `/chat/message` - AI 채팅 기능
+- `/user/translate` - 콘텐츠 번역
+- 채용정보 및 커뮤니티 관련 추가 엔드포인트
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 기여하기
 
-### Deployment
+1. 저장소 포크
+2. 기능 브랜치 생성
+3. 변경사항 커밋
+4. 브랜치에 푸시
+5. Pull Request 생성
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -57,172 +57,156 @@ const Job = () => {
         name: '삼성전자',
         logo: 'https://images.samsung.com/kdp/aboutsamsung/brand_identity/logo/256_144_1.png?$512_288_PNG$'
       },
-      title: '프론트엔드 개발자 (React)',
-      location: '서울 서초구',
+      title: '전자부품 조립원',
+      location: '서울 구로구',
       dueDate: '2024.12.31',
-      views: 1234,
-      scraps: 56,
+      views: 1520,
+      scraps: 80,
       isScraped: false,
-      직무: '개발',
-      비자: 'F-4',
+      직무: '조립',
+      비자: 'H-2',
       지역: '서울',
-      언어: ['한국어', '영어'],
-      경력: '3~5년',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
       고용형태: '정규직',
       description: `주요업무
-  - React 기반의 웹 애플리케이션 개발
-  - 사용자 인터페이스 구현 및 개선
-  - 성능 최적화 및 테스트 코드 작성
-  
-  자격요건
-  - 3년 이상의 React 개발 경험
-  - JavaScript/TypeScript 능숙자
-  - RESTful API 연동 경험
-  
-  우대사항
-  - Next.js, Redux 사용 경험
-  - 웹 접근성 및 반응형 디자인 이해
-  - Git 버전 관리 시스템 사용 경험`
+    - 전자부품 조립 및 검사
+    - 공정 기준에 따른 작업 수행
+    
+    자격요건
+    - 기본적인 한국어 소통 가능
+    - 팀워크를 중요하게 생각하는 분
+    
+    우대사항
+    - 관련 경력자 우대
+    - 성실하고 책임감 있는 분`
     },
     {
       id: 2,
       company: {
-        name: '네이버',
-        logo: 'https://media.licdn.com/dms/image/v2/C560BAQECT6Sd8Jz7Ug/company-logo_200_200/company-logo_200_200/0/1659403404968/naver_logo?e=2147483647&v=beta&t=Zsz4jSjjBr6BH5KWGZOlQXPGfpSk4uc8-10cL23N11Q'
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
       },
-      title: '클라우드 개발자',
-      location: '부산 서구',
-      dueDate: '2024.12.31',
-      views: 985,
-      scraps: 78,
+      title: '물류 창고 관리자',
+      location: '경기도 평택',
+      dueDate: '2024.12.20',
+      views: 1320,
+      scraps: 75,
       isScraped: true,
-      직무: '클라우드',
-      비자: 'E-2',
-      지역: '부산',
-      언어: ['한국어', '영어'],
-      경력: '1~3년',
-      고용형태: '인턴',
+      직무: '물류',
+      비자: 'F-2',
+      지역: '경기',
+      언어: ['한국어 (기본)', '영어 (우대)'],
+      경력: '1년 이상',
+      고용형태: '계약직',
       description: `주요업무
-  - 클라우드 서비스 유지보수 및 개발
-  - 신규 클라우드 인프라 설계 및 구축
-  - DevOps 환경 개선
-  
-  자격요건
-  - 클라우드 관련 경험 (AWS, Azure 등)
-  - Linux 서버 관리 능숙자
-  - Bash 및 Python 스크립트 작성 가능
-  
-  우대사항
-  - Terraform, Ansible 사용 경험
-  - 대규모 시스템 설계 경험
-  - Kubernetes 관리 경험`
+    - 물류 창고 재고 관리
+    - 물품 입출고 및 분류
+    
+    자격요건
+    - 한국어 기초 소통 가능
+    - 체력적으로 문제가 없는 분
+    
+    우대사항
+    - 물류 관리 시스템 경험자
+    - 컴퓨터 활용 가능`
     },
     {
       id: 3,
       company: {
-        name: '카카오',
-        logo: 'https://img.icons8.com/color/200/kakao-talk.png'
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
       },
-      title: '백엔드 개발자 (Java)',
-      location: '경기도 판교',
-      dueDate: '2024.12.15',
-      views: 2034,
-      scraps: 112,
+      title: '제과 제조 보조원',
+      location: '부산 사하구',
+      dueDate: '2024.11.30',
+      views: 1540,
+      scraps: 90,
       isScraped: false,
-      직무: '개발',
-      비자: 'H-1',
-      지역: '경기',
-      언어: ['한국어', '영어'],
-      경력: '5년 이상',
+      직무: '제조',
+      비자: 'E-9',
+      지역: '부산',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
       고용형태: '정규직',
       description: `주요업무
-  - Java 기반 백엔드 API 개발 및 유지보수
-  - 대규모 데이터 처리 및 최적화
-  - 데이터베이스 설계 및 관리
-  
-  자격요건
-  - Java와 Spring Framework에 능숙
-  - SQL 및 데이터베이스 최적화 경험
-  - RESTful API 설계 경험
-  
-  우대사항
-  - Kafka, RabbitMQ 경험
-  - Docker 및 컨테이너 활용 경험
-  - 시스템 아키텍처 설계 경험`
+    - 제과 제조 공정 보조
+    - 생산 라인 청결 및 위생 관리
+    
+    자격요건
+    - 한국어 기초 소통 가능
+    - 야간 근무 가능자
+    
+    우대사항
+    - 관련 경험자 우대
+    - 성실하고 꼼꼼한 분`
     },
     {
       id: 4,
       company: {
-        name: 'LG전자',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/LG_logo_%282015%29.svg/1200px-LG_logo_%282015%29.svg.png'
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
       },
-      title: '데이터 분석가',
+      title: '청소 및 시설 관리',
       location: '서울 강남구',
-      dueDate: '2024.11.30',
-      views: 1450,
-      scraps: 65,
-      isScraped: false,
-      직무: '데이터 분석',
-      비자: 'F-5',
+      dueDate: '2024.12.15',
+      views: 1230,
+      scraps: 50,
+      isScraped: true,
+      직무: '시설 관리',
+      비자: 'H-2',
       지역: '서울',
-      언어: ['한국어', '영어'],
-      경력: '2~4년',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
       고용형태: '계약직',
       description: `주요업무
-  - 대규모 데이터 분석 및 시각화
-  - 머신러닝 모델 개발 및 유지보수
-  - 데이터 기반의 비즈니스 인사이트 도출
-  
-  자격요건
-  - Python 및 R에 능숙
-  - SQL 데이터 처리 경험
-  - 데이터 시각화 도구(Tableau, Power BI) 활용 가능
-  
-  우대사항
-  - 머신러닝 프로젝트 경험
-  - Hadoop/Spark 사용 경험
-  - 통계학/수학 배경 지식`
+    - 공장 및 사무실 청소
+    - 시설 내 위생 관리
+    
+    자격요건
+    - 기본적인 한국어 가능
+    - 성실하고 신체 건강한 분
+    
+    우대사항
+    - 관련 직무 경험자
+    - 팀 작업에 익숙한 분`
     },
     {
       id: 5,
       company: {
-        name: '라인',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/LINE_logo.svg/1200px-LINE_logo.svg.png'
+        name: '쿠팡',
+        logo: 'https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0'
       },
-      title: '모바일 앱 개발자 (iOS)',
-      location: '인천 송도구',
-      dueDate: '2024.12.20',
-      views: 1890,
-      scraps: 92,
-      isScraped: true,
-      직무: '모바일 개발',
-      비자: 'D-2',
+      title: '건설 현장 보조원',
+      location: '인천 연수구',
+      dueDate: '2024.12.10',
+      views: 1650,
+      scraps: 110,
+      isScraped: false,
+      직무: '건설',
+      비자: 'E-10',
       지역: '인천',
-      언어: ['한국어', '영어'],
-      경력: '3~5년',
+      언어: ['한국어 (기본)'],
+      경력: '무관',
       고용형태: '정규직',
       description: `주요업무
-  - iOS 플랫폼용 모바일 애플리케이션 개발
-  - UI/UX 개선 및 유지보수
-  - 최신 Apple 기술 적용
-  
-  자격요건
-  - Swift 및 Objective-C에 능숙
-  - iOS 앱 출시 경험
-  - MVVM 아키텍처 이해
-  
-  우대사항
-  - SwiftUI 및 Combine 사용 경험
-  - 모바일 성능 최적화 경험
-  - 코어 데이터 또는 Realm 사용 경험`
+    - 건설 현장 작업 보조
+    - 현장 정리 및 자재 운반
+    
+    자격요건
+    - 한국어 기초 소통 가능
+    - 신체 건강하고 체력 좋은 분
+    
+    우대사항
+    - 관련 작업 경험자
+    - 안전 장비 사용 경험`
     }
   ];
-  
   const [jobs, setJobs] = useState(jobPosts);
 
 
   const filterOptions = {
-    '직무': ['개발', '디자인', '마케팅', '영업', '경영'],
+    '직무': ['개발', '건설', '시설관리', '제조', '경영'],
     '비자': ['F-2-1', 'F-4', 'F-5', 'E-7', 'D-2'],
     '지역': ['서울', '부산', '대구', '인천', '광주'],
     '언어': ['한국어', '영어', '일본어', '중국어'],
@@ -492,7 +476,7 @@ const Job = () => {
               {job.description}
             </pre>
             <div className="mt-6 flex justify-end">
-              <button
+              {/* <button
                 className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -500,7 +484,7 @@ const Job = () => {
                 }}
               >
                 지원하기
-              </button>
+              </button> */}
             </div>
           </div>
         )}
