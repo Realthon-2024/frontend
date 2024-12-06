@@ -7,9 +7,14 @@ module.exports = {
     extend: {
       colors: {
         primary: '#FCCE56',
-        textBox: '#FCFCFA'
+        textBox: '#FCFCFA',
+        login: '#FCBA56'
+
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+
+  ],
 }
